@@ -1,0 +1,55 @@
+<input type="checkbox" id="check" [checked]="isChecked"> <label class="chat-btn" for="check"> <i
+    class="text-center Message"></i><img class="image" src="assets/OIP.jfif"> <i class="fa fa-close close"></i> </label>
+
+
+<div class="wrapper h-100">
+  <div class="row">
+    <div class="container-fluid h-100 " class="col-md-4 col-md-12 col-12"
+      *ngFor="let obj of msgInboxAdminArray; let i = index;">
+      <div class="row justify-content-center h-100">
+        <div class="col-md-8 col-xl-6 chat">
+          <div cdkDrag class="card">
+            <div class="card-header msg_head" style="background-color: #1c3e6c;">
+              <div class="bd-highlight">
+                <div class="img_cont">
+                  <img src="https://static.turbosquid.com/Preview/001292/481/WV/_D.jpg" class="rounded-circle user_img">
+                  <span class="online_icon">{{obj.from}}</span>
+                  <button type="button" class="close" data-dismiss="modal" (click)="close(i)">&times;</button>
+                </div>
+              </div>
+            </div>
+            <div class="ud-body">
+              <div class="msg-box">
+                <ul>
+                  <div *ngFor="let mObj of obj.messages" [ngClass]="mObj.from === user ? 'in-msg' : 'ex-msg'">
+                    {{mObj.from}} :<br /><span class="msg-italic-style">{{mObj.message}}</span>
+                    <br><span class="msg-italic">{{mObj.date|date:'medium'}}</span>
+                  </div>
+                </ul>
+              </div>
+              <div class="card-footer">
+                <form [formGroup]="msgForm">
+                  <div formArrayName="msgText">
+                    <div [formGroupName]="i">
+                      <div class="input-group">
+                        <div class="input-group-append">
+                          <span class="input-group-text attach_btn"><i class="fas fa-paperclip"></i></span>
+                        </div>
+                        <textarea name="msg" formControlName="msg" class="form-control type_msg"
+                          placeholder="Type your message..."></textarea>
+                        <div class="input-group-append">
+                          <span class="input-group-text send_btn" (click)="send(obj.from,i)"><i
+                              class="fas fa-location-arrow">Send</i></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

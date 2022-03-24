@@ -1,0 +1,12 @@
+<div class="wrapper " *ngIf="logincheck">
+  <app-header></app-header>
+  <router-outlet></router-outlet>
+</div>
+
+
+<div class="wrapper " *ngIf="!logincheck">
+  <app-login ></app-login>
+
+  
+
+</div>

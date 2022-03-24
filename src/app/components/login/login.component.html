@@ -1,0 +1,43 @@
+<div *ngIf="Reg" class="container register">
+  <div class="row">
+    <div class="col-md-3 register-left">
+      <img src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
+      <h3>Welcome</h3>
+      <p></p>
+    </div>
+    <div class="col-md-9 register-right">
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+          <h3 class="register-heading">
+            <img src="assets/logo legit.jpg" style="width: 300px;" alt="logo">
+          </h3>
+          <div class="row register-form">
+            <div class="col-md-6">
+              <form [formGroup]="loginForm">
+                <div class="form-group">
+                  <label class="form-label" for="form2Example11">Username</label>
+                  <input type="email" formControlName="UserName" id="form2Example11" class="form-control"
+                    placeholder="User Name" />
+                </div>
+                <div class="form-group mt-2">
+                  <label class="form-label" for="form2Example22">Password</label>
+                  <input type="password" formControlName="Password" id="form2Example22" class="form-control"
+                    placeholder="Password" />
+                </div>
+              </form>
+            </div>
+              <div class="form-group">
+                <input type="submit" class="btnRegister" (click)="onLogin()" value="Login" />
+                 <a class="nav-item text-center"> <a class="nav-link btr" id="pills-profile-tab" data-toggle="pill"
+                   (click)="register()" role="tab" aria-controls="pills-profile" aria-selected="false">Signup</a>
+                </a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div *ngIf="!Reg">
+<app-register></app-register>
+</div>

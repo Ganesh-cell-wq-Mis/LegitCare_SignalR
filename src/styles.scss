@@ -1,0 +1,179 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import '~ngx-toastr/toastr.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+  body {
+    font-family: poppins, "Work Sans", Arial, sans-serif;
+    background: #fff;
+    font-size: 14px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+    overflow: auto;
+  }
+.navbar-top {
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+.navbar-sticky {
+  position: sticky;
+  top: 0px;
+  left: 0;
+  z-index: 9;
+  background-color: #fff;
+}
+// .row {
+//   display: -webkit-box;
+//   display: -ms-flexbox;
+//   display: flex;
+//   -ms-flex-wrap: wrap;
+//   flex-wrap: wrap;
+//   margin-right: -15px;
+//   margin-left: -15px;
+
+// }
+#ftco-navbar {
+  background: url(assets\bg-menu.png);
+}
+// .container {
+//     max-width: 1230px;
+// }
+.align-items-center {
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    align-items: center !important;
+}
+
+
+.d-flex {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+}
+.navbar-toggler {
+  padding: 0.25rem 0.75rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.navbar-toggler:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+.navbar-dark .navbar-toggler {
+  color: rgba(255, 255, 255, 0.5);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+.navbar-nav li {
+  padding-left: 38px;
+}
+.navbar {
+    position: relative;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+}
+.navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-left: 0;
+  margin-bottom: 0;
+  list-style: none;
+}
+.logo-top {
+  position: absolute;
+  top: 26px;
+  left: -20px;
+  z-index: 99;
+  width: 300px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: bold;
+  font-size: 18px;
+}
+// .container {
+//   width: 100%;
+//   padding-right: 15px;
+//   padding-left: 15px;
+//   margin-right: auto;
+//   margin-left: auto;
+// }
+.navbar-nav li {
+  padding-left: 38px;
+}
+.nav-link {
+  display: block;
+  padding: 0.5rem 1rem;
+}
+a {
+  color: #007bff;
+  text-decoration: none;
+  background-color: transparent;
+}
+.navbar-dark .navbar-nav .show > .nav-link, .navbar-dark .navbar-nav .active > .nav-link, .navbar-dark .navbar-nav .nav-link.show, .navbar-dark .navbar-nav .nav-link.active {
+  color: #fff;
+}
+@media (min-width: 992px)
+{
+.navbar-expand-lg .navbar-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+}
+@media (min-width: 992px)
+{
+.navbar-expand-lg .navbar-toggler {
+    display: none;
+}
+}
+
+.bg-topbar{
+  border:1px solid #245494;
+  padding:7px 10px;
+  border-radius:25px;
+  text-align: center
+}
+
+.bg-topbar span{
+  text-align: center;
+  font-weight: bold;
+  color: #245494;
+
+}
+.bg-topbar i{
+  font-weight: bold !important;
+  position: relative;
+  top:2px;
+}
+
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/poppins/v19/pxiEyp8kv8JHgFVrJJfecg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+.btn.btn-secondary {
+  background: #245494;
+  border: 1px solid #245494;
+  color: #fff;
+  border-radius: 40px;
+
+}
